@@ -114,6 +114,15 @@
   padding: 14px 16px;
   border-bottom: 1px solid var(--li-border);
 }
+.dropdown-header-info {
+  flex: 1;
+  min-width: 0;
+}
+.dropdown-headline {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.3;
+}
 .dropdown-item {
   display: flex; align-items: center; gap: 10px;
   padding: 11px 16px; width: 100%;

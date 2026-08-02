@@ -88,9 +88,9 @@ export default function Navbar() {
               <div className="profile-dropdown animate-slideUp">
                 <div className="dropdown-header">
                   <div className="avatar avatar-md" style={{ background: user.avatarColor }}>{user.initials}</div>
-                  <div>
+                  <div className="dropdown-header-info">
                     <div className="font-600">{user.name}</div>
-                    <div className="text-sm text-secondary truncate" style={{ maxWidth: 180 }}>{user.headline}</div>
+                    <div className="text-sm text-secondary dropdown-headline">{user.headline}</div>
                   </div>
                 </div>
                 <Link to="/profile/me" className="dropdown-item" onClick={() => setProfileOpen(false)}>
