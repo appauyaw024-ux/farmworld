@@ -14,8 +14,8 @@
 .jobs-type-filters { display: flex; gap: 6px; flex-wrap: wrap; }
 .type-filter-btn {
   padding: 8px 16px; border-radius: var(--radius-full);
-  background: var(--bg-input); border: 1.5px solid var(--glass-border);
-  color: var(--text-secondary); font-size: 13px; font-weight: 600; font-family: inherit;
+  background: #fef3c7; border: 1.5px solid #fbbf24;
+  color: #d97706; font-size: 13px; font-weight: 600; font-family: inherit;
   cursor: pointer; transition: var(--transition);
   /* Stronger soft shadow for visible 3D effect */
   box-shadow: 
@@ -25,8 +25,9 @@
     0 8px 24px rgba(0, 0, 0, 0.08);
 }
 .type-filter-btn:hover { 
-  border-color: var(--glass-border-hover); 
-  color: var(--text-primary); 
+  border-color: #f59e0b; 
+  color: #b45309;
+  background: #fde68a;
   /* Stronger shadow on hover */
   box-shadow: 
     0 3px 6px rgba(0, 0, 0, 0.18),
@@ -36,15 +37,15 @@
   transform: translateY(-2px);
 }
 .type-filter-btn.active { 
-  background: #22c55e; 
-  border-color: #22c55e; 
+  background: #f59e0b; 
+  border-color: #f59e0b; 
   color: white;
   /* Stronger shadow for active state - no green glow */
   box-shadow: 
-    0 2px 0 #16a34a,
-    0 4px 8px rgba(0, 0, 0, 0.18),
-    0 6px 12px rgba(0, 0, 0, 0.14),
-    0 8px 20px rgba(0, 0, 0, 0.10);
+    0 2px 0 #d97706,
+    0 4px 8px rgba(245, 158, 11, 0.4),
+    0 6px 12px rgba(245, 158, 11, 0.3),
+    0 0 20px rgba(245, 158, 11, 0.4);
   transform: translateY(-1px);
 }
 
