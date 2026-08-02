@@ -224,6 +224,7 @@ export default function Feed() {
           <div className="feed-welcome-banner" style={{
             position: 'relative',
             overflow: 'hidden',
+            minHeight: '200px',
             ...(heroMedia?.media_url && {
               backgroundImage: `url(${heroMedia.media_url})`,
               backgroundSize: 'cover',
@@ -250,30 +251,6 @@ export default function Feed() {
                 <source src={heroMedia.media_url} type="video/mp4" />
               </video>
             )}
-            
-            {/* Overlay for better text readability */}
-            <div style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2))',
-              zIndex: 1,
-            }} />
-
-            {/* Content */}
-            <div className="feed-welcome-text" style={{ position: 'relative', zIndex: 2 }}>
-              <div className="feed-welcome-emoji">🌾</div>
-              <div>
-                <div className="feed-welcome-title">
-                  {heroMedia?.title || 'FarmWorld'}
-                </div>
-                <div className="feed-welcome-sub">
-                  {heroMedia?.subtitle || 'Where Farmers Connect'}
-                </div>
-              </div>
-            </div>
-            <p className="feed-welcome-desc" style={{ position: 'relative', zIndex: 2 }}>
-              {heroMedia?.description || 'Share knowledge, discover trade opportunities, and grow your agricultural network with farmers from over 100 countries.'}
-            </p>
           </div>
 
           <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: 12 }}>
