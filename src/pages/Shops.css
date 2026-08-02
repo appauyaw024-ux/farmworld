@@ -785,7 +785,7 @@
 
 /* Card body */
 .fsc-body { 
-  padding: 14px 14px 14px; /* Adjusted padding since banner is hidden */
+  padding: 50px 14px 14px; /* Added top padding to make room for Featured badge */
 }
 .fsc-name-row {
   display: flex; align-items: center; gap: 6px;
