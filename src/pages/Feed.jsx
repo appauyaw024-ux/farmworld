@@ -1,5 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { MapPin, Users, TrendingUp, UserPlus, ThumbsUp, MessageCircle, Megaphone, Star, ExternalLink, X, ShoppingBag } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { SPONSORED_ADS } from '../data/mockData';
 import CreatePost from '../components/CreatePost';
@@ -170,6 +172,38 @@ function SuggestionsSidebar({ suggestions, connect }) {
 export default function Feed() {
   const { user, posts, suggestions, connect } = useApp();
   const feedAds = SPONSORED_ADS.filter(a => a.type === 'feed_post');
+  const [heroMedia, setHeroMedia] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch hero media from Supabase
+  useEffect(() => {
+    async function fetchHeroMedia() {
+      try {
+        const { data, error } = await supabase
+          .from('hero_media')
+          .select('*')
+          .eq('page', 'feed')
+          .eq('is_active', true)
+          .maybeSingle(); // Use maybeSingle instead of single to avoid errors if no row exists
+
+        if (error) {
+          console.error('Error fetching hero media:', error);
+          // Continue with default content if error
+        } else if (data) {
+          console.log('Hero media loaded:', data);
+          setHeroMedia(data);
+        } else {
+          console.log('No active hero media found for feed page');
+        }
+      } catch (err) {
+        console.error('Failed to fetch hero media:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchHeroMedia();
+  }, []);
 
   // Interleave sponsored posts into feed: after post 1 and post 3
   const feedItems = [];
@@ -186,16 +220,60 @@ export default function Feed() {
 
         {/* Main Feed */}
         <main className="feed-main">
-          {/* Welcome banner */}
-          <div className="feed-welcome-banner">
-            <div className="feed-welcome-text">
+          {/* Welcome banner with hero media */}
+          <div className="feed-welcome-banner" style={{
+            position: 'relative',
+            overflow: 'hidden',
+            ...(heroMedia?.media_url && {
+              backgroundImage: `url(${heroMedia.media_url})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            })
+          }}>
+            {/* Video overlay if media_type is video */}
+            {heroMedia?.media_type === 'video' && heroMedia?.media_url && (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  zIndex: 0,
+                }}
+              >
+                <source src={heroMedia.media_url} type="video/mp4" />
+              </video>
+            )}
+            
+            {/* Overlay for better text readability */}
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2))',
+              zIndex: 1,
+            }} />
+
+            {/* Content */}
+            <div className="feed-welcome-text" style={{ position: 'relative', zIndex: 2 }}>
               <div className="feed-welcome-emoji">🌾</div>
               <div>
-                <div className="feed-welcome-title">FarmWorld</div>
-                <div className="feed-welcome-sub">Where Farmers Connect</div>
+                <div className="feed-welcome-title">
+                  {heroMedia?.title || 'FarmWorld'}
+                </div>
+                <div className="feed-welcome-sub">
+                  {heroMedia?.subtitle || 'Where Farmers Connect'}
+                </div>
               </div>
             </div>
-            <p className="feed-welcome-desc">Share knowledge, discover trade opportunities, and grow your agricultural network with farmers from over 100 countries.</p>
+            <p className="feed-welcome-desc" style={{ position: 'relative', zIndex: 2 }}>
+              {heroMedia?.description || 'Share knowledge, discover trade opportunities, and grow your agricultural network with farmers from over 100 countries.'}
+            </p>
           </div>
 
           <div className="card" style={{ padding: 0, overflow: 'hidden', marginBottom: 12 }}>

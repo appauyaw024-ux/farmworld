@@ -42,7 +42,7 @@ export default function Navbar() {
       <div className="navbar-inner">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <div className="logo-icon">🌾</div>
+          <img src="/logo.png" alt="FarmWorld" className="logo-icon-img" />
           <div className="logo-text-wrap">
             <span className="logo-text">FarmWorld</span>
             <span className="logo-tagline">Where Farmers Connect</span>

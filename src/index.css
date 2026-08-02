@@ -304,7 +304,7 @@ textarea.input { resize: vertical; min-height: 80px; }
   min-height: 100vh;
 }
 .main-content {
-  padding-top: 52px;
+  padding-top: 64px;
   flex: 1;
 }
 .page-container {
