@@ -34,8 +34,16 @@
 
 /* Suggestions */
 .suggestions-card { padding: 16px; }
-.suggestions-list { display: flex; flex-direction: column; gap: 16px; }
-.suggestion-item { display: flex; gap: 10px; align-items: flex-start; }
+.suggestions-list { display: flex; flex-direction: column; gap: 0; }
+.suggestion-item { 
+  display: flex; 
+  gap: 10px; 
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--li-border);
+}
+.suggestion-item:first-child { padding-top: 0; }
+.suggestion-item:last-child { border-bottom: none; padding-bottom: 0; }
 .suggestion-info { flex: 1; min-width: 0; }
 .suggestion-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
 .connect-btn { flex-shrink: 0; }
@@ -203,79 +211,4 @@
 .shops-promo-sub { font-size: 11px; color: var(--text-muted); }
 .shops-promo-arrow { color: #4ade80; font-size: 16px; font-weight: 700; flex-shrink: 0; }
 
-.profile-mini-avatar {
-  padding: 0 16px;
-  margin-top: -28px;
-}
-.profile-mini-avatar .avatar {
-  border: 3px solid var(--bg-secondary);
-}
-.profile-mini-info { padding: 8px 16px 0; }
-.profile-mini-name {
-  font-size: 16px; font-weight: 700; color: var(--text-primary);
-  text-decoration: none; display: block;
-}
-.profile-mini-name:hover { color: var(--primary-light); }
-.profile-mini-stats { padding: 0 16px; }
-.stat-row { display: flex; justify-content: space-between; padding: 5px 0; }
-.stat-val { font-weight: 700; color: var(--primary-light); }
-.text-primary-light { color: var(--primary-light); }
-.view-profile-link {
-  display: block; padding: 12px 16px 16px;
-  font-size: 13px; font-weight: 600; color: var(--primary-light);
-  text-decoration: none; transition: var(--transition);
-}
-.view-profile-link:hover { color: #fff; }
 
-/* Feed main */
-.feed-main { min-width: 0; }
-
-/* Suggestions */
-.suggestions-card { padding: 16px; }
-.suggestions-list { display: flex; flex-direction: column; gap: 16px; }
-.suggestion-item { display: flex; gap: 10px; align-items: flex-start; }
-.suggestion-info { flex: 1; min-width: 0; }
-.suggestion-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
-.connect-btn { flex-shrink: 0; }
-
-/* Trending */
-.trending-tag {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 8px 0; border-bottom: 1px solid var(--glass-border);
-}
-.trending-tag:last-child { border-bottom: none; }
-.tag-label { font-size: 13px; font-weight: 600; color: var(--primary-light); cursor: pointer; }
-.tag-label:hover { text-decoration: underline; }
-
-/* Feed welcome banner */
-.feed-welcome-banner {
-  padding: 20px;
-  margin-bottom: 12px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(21,128,61,0.15) 0%, rgba(74,222,128,0.08) 100%);
-  border: 1px solid rgba(74,222,128,0.2);
-  position: relative;
-  overflow: hidden;
-}
-.feed-welcome-banner::before {
-  content: '🌿🌱🌾';
-  position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
-  font-size: 36px; opacity: 0.15; pointer-events: none;
-}
-.feed-welcome-text {
-  display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
-}
-.feed-welcome-emoji {
-  font-size: 32px;
-  filter: drop-shadow(0 2px 8px rgba(74,222,128,0.4));
-}
-.feed-welcome-title {
-  font-size: 18px; font-weight: 800; color: var(--text-primary); line-height: 1;
-}
-.feed-welcome-sub {
-  font-size: 11px; font-weight: 700; color: #4ade80;
-  text-transform: uppercase; letter-spacing: 1px; margin-top: 2px;
-}
-.feed-welcome-desc {
-  font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin: 0;
-}
