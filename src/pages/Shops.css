@@ -810,10 +810,10 @@
 }
 .fsc-cat {
   padding: 2px 8px;
-  background: rgba(245,158,11,0.1);
-  border: 1px solid rgba(245,158,11,0.25);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 20px;
-  font-size: 10px; font-weight: 700; color: #f59e0b;
+  font-size: 10px; font-weight: 700; color: #6b7280;
   cursor: pointer;
   transition: all 0.2s ease;
   /* Stronger soft shadow for visible 3D effect */
@@ -824,6 +824,9 @@
     0 8px 24px rgba(0, 0, 0, 0.08);
 }
 .fsc-cat:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+  color: #374151;
   /* Stronger shadow on hover */
   box-shadow: 
     0 3px 6px rgba(0, 0, 0, 0.18),
