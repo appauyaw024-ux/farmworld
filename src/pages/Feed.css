@@ -3,7 +3,7 @@
 .profile-mini-card { padding: 0; overflow: hidden; }
 .profile-mini-banner {
   height: 72px;
-  background: linear-gradient(135deg, #15803d, #4ade80);
+  background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
 }
 .profile-mini-avatar {
   padding: 0 16px;
