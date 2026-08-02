@@ -649,15 +649,10 @@
   font-size: 12px; font-weight: 700; cursor: pointer;
   white-space: nowrap; flex-shrink: 0;
   transition: all 0.2s ease;
-  /* 3D effect with depth */
-  box-shadow: 
-    0 4px 0 #b45309,
-    0 8px 14px rgba(217, 119, 6, 0.4),
-    0 0 20px rgba(245, 158, 11, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: none;
   transform: translateY(0);
   position: relative;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
   animation: slideInRight 0.6s ease-out;
 }
 
@@ -674,22 +669,13 @@
 
 .featured-section-cta:hover { 
   transform: translateY(-2px);
-  box-shadow: 
-    0 6px 0 #b45309,
-    0 10px 20px rgba(217, 119, 6, 0.5),
-    0 0 30px rgba(245, 158, 11, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: none;
   animation: none;
 }
 
 .featured-section-cta:active {
   transform: translateY(2px);
-  box-shadow: 
-    0 2px 0 #b45309,
-    0 6px 12px rgba(217, 119, 6, 0.4),
-    0 8px 16px rgba(217, 119, 6, 0.3),
-    0 0 25px rgba(245, 158, 11, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: none;
 }
 
 /* Featured shops horizontal scroll grid */
