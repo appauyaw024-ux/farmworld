@@ -81,12 +81,20 @@
   border-radius: 10px; color: var(--text-secondary);
   font-size: 13px; font-weight: 600; cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.12),
+    0 6px 16px rgba(0, 0, 0, 0.10),
+    0 8px 24px rgba(0, 0, 0, 0.08);
 }
 .sd-share-btn:hover { 
   border-color: #4ade80; 
   color: #4ade80;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.18),
+    0 6px 12px rgba(0, 0, 0, 0.14),
+    0 8px 20px rgba(0, 0, 0, 0.12),
+    0 12px 32px rgba(0, 0, 0, 0.10);
   transform: translateY(-2px);
 }
 
@@ -97,12 +105,20 @@
   border-radius: 10px; color: var(--text-primary);
   font-size: 13px; font-weight: 600; cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.12),
+    0 6px 16px rgba(0, 0, 0, 0.10),
+    0 8px 24px rgba(0, 0, 0, 0.08);
 }
 .sd-msg-btn:hover { 
   border-color: #4ade80; 
   color: #4ade80;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.18),
+    0 6px 12px rgba(0, 0, 0, 0.14),
+    0 8px 20px rgba(0, 0, 0, 0.12),
+    0 12px 32px rgba(0, 0, 0, 0.10);
   transform: translateY(-2px);
 }
 
@@ -113,9 +129,20 @@
   border: none; border-radius: 10px; color: #fff;
   font-size: 13px; font-weight: 700; cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 16px rgba(21,128,61,0.4);
+  box-shadow: 
+    0 2px 0 #0f5e2e,
+    0 4px 8px rgba(21, 128, 61, 0.3),
+    0 6px 16px rgba(21, 128, 61, 0.2),
+    0 8px 24px rgba(21, 128, 61, 0.15);
 }
-.sd-visit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(21,128,61,0.5); }
+.sd-visit-btn:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 
+    0 4px 0 #0f5e2e,
+    0 6px 12px rgba(21, 128, 61, 0.4),
+    0 10px 24px rgba(21, 128, 61, 0.3),
+    0 14px 36px rgba(21, 128, 61, 0.2);
+}
 
 /* Header info */
 .sd-name-row { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
@@ -274,12 +301,20 @@
   border-radius: 10px; color: var(--text-primary);
   font-size: 13px; font-weight: 700; cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.12),
+    0 6px 16px rgba(0, 0, 0, 0.10),
+    0 8px 24px rgba(0, 0, 0, 0.08);
 }
 .sd-farmworld-msg-btn:hover { 
   border-color: #4ade80; 
   color: #4ade80;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.18),
+    0 6px 12px rgba(0, 0, 0, 0.14),
+    0 8px 20px rgba(0, 0, 0, 0.12),
+    0 12px 32px rgba(0, 0, 0, 0.10);
   transform: translateY(-2px);
 }
 
@@ -290,12 +325,20 @@
   border: none; border-radius: 10px; color: #fff;
   font-size: 13px; font-weight: 700; cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 16px rgba(18, 140, 126, 0.4);
+  box-shadow: 
+    0 2px 0 #0d6b5e,
+    0 4px 8px rgba(18, 140, 126, 0.3),
+    0 6px 16px rgba(18, 140, 126, 0.2),
+    0 8px 24px rgba(18, 140, 126, 0.15);
 }
 .sd-whatsapp-btn:hover { 
   opacity: 0.9; 
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(18, 140, 126, 0.5);
+  box-shadow: 
+    0 4px 0 #0d6b5e,
+    0 6px 12px rgba(18, 140, 126, 0.4),
+    0 10px 24px rgba(18, 140, 126, 0.3),
+    0 14px 36px rgba(18, 140, 126, 0.2);
 }
 
 /* Location card */
