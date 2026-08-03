@@ -72,6 +72,7 @@
   flex-wrap: wrap; 
   justify-content: flex-end;
   max-width: 100%;
+  margin-top: 24px;
 }
 .sd-share-btn {
   display: flex; align-items: center; gap: 6px;
