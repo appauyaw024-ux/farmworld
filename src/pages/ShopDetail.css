@@ -81,8 +81,14 @@
   border-radius: 10px; color: var(--text-secondary);
   font-size: 13px; font-weight: 600; cursor: pointer;
   transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.sd-share-btn:hover { border-color: #4ade80; color: #4ade80; }
+.sd-share-btn:hover { 
+  border-color: #4ade80; 
+  color: #4ade80;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
 
 .sd-msg-btn {
   display: flex; align-items: center; gap: 6px;
@@ -91,8 +97,14 @@
   border-radius: 10px; color: var(--text-primary);
   font-size: 13px; font-weight: 600; cursor: pointer;
   transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.sd-msg-btn:hover { border-color: #4ade80; color: #4ade80; }
+.sd-msg-btn:hover { 
+  border-color: #4ade80; 
+  color: #4ade80;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
 
 .sd-visit-btn {
   display: flex; align-items: center; gap: 6px;
@@ -262,8 +274,14 @@
   border-radius: 10px; color: var(--text-primary);
   font-size: 13px; font-weight: 700; cursor: pointer;
   transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.sd-farmworld-msg-btn:hover { border-color: #4ade80; color: #4ade80; }
+.sd-farmworld-msg-btn:hover { 
+  border-color: #4ade80; 
+  color: #4ade80;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
 
 .sd-whatsapp-btn {
   width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;
@@ -272,8 +290,13 @@
   border: none; border-radius: 10px; color: #fff;
   font-size: 13px; font-weight: 700; cursor: pointer;
   transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(18, 140, 126, 0.4);
 }
-.sd-whatsapp-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.sd-whatsapp-btn:hover { 
+  opacity: 0.9; 
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18, 140, 126, 0.5);
+}
 
 /* Location card */
 .sd-location-card { padding: 22px; margin-bottom: 12px; }
