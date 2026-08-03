@@ -300,7 +300,8 @@ export default function ShopDetail() {
               </button>
 
               <button className="sd-whatsapp-btn" onClick={handleWhatsApp}>
-                💬 Chat on WhatsApp
+                <img src="/whatsapp-icon.png" alt="WhatsApp" style={{ width: '20px', height: '20px' }} />
+                Chat on WhatsApp
               </button>
             </div>
 
